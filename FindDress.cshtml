@@ -1,0 +1,50 @@
+﻿@model TableData.Models.Objects
+
+@{
+    ViewBag.Title = "FindDress";
+}
+
+<h2>FindDress</h2>
+
+<div>
+    <h4>Objects</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DressBrand)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DressBrand)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DressID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DressID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DressType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DressType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DressPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DressPrice)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "UpdateDress", new {id = Model.DressID}) 
+    @Html.ActionLink("Back to List", "GetDresses")
+</p>

@@ -1,0 +1,51 @@
+﻿@model IEnumerable<TableData.Models.Objects>
+
+@{
+    ViewBag.Title = "GetDresses";
+}
+
+<h2>GetDresses</h2>
+
+<p>
+    @Html.ActionLink("Create New", "AddDress")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DressBrand)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DressID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DressType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DressPrice)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DressBrand)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DressID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DressType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DressPrice)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "UpdateDress", new {id=item.DressID }) |
+            @Html.ActionLink("Details", "FindDress", new { id = item.DressID }) |
+            @Html.ActionLink("Delete", "DeleteDress", new { id = item.DressID })
+        </td>
+    </tr>
+}
+
+</table>
